@@ -449,7 +449,6 @@ export default function Portfolio() {
 
       <section id="contact" className="py-24 px-4 sm:px-6 bg-zinc-900">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-emerald-400 font-mono mb-4">05. What's Next?</p>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-zinc-100">Restons en contact</h2>
           <p className="text-zinc-300 text-lg mb-12 leading-relaxed">
             Je suis actuellement à la recherche de nouvelles opportunités (stage ou freelance). 
@@ -479,7 +478,7 @@ export default function Portfolio() {
             <a href="#" className="text-zinc-400 hover:text-emerald-400 transition-colors"><Linkedin size={22} /></a>
           </div>
           <p className="text-zinc-500 text-sm">
-            Conçu et codé avec <span className="text-emerald-400">♥</span> par Luz-clarita ASSOGBA © 2026
+            Conçu et codé par Luz-clarita ASSOGBA © 2026
           </p>
         </div>
       </footer>

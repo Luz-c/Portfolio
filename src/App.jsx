@@ -190,31 +190,31 @@ export default function Portfolio() {
       </nav>
 
       {/* HERO SECTION */}
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 text-center px-4 pt-16 md:pt-0">
+      <section id="home" className="py-10 md:py-24 flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 text-center px-4 sm:px-6">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
         
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[100px] pointer-events-none" />
 
-        {/* Espace ajusté ici : pt-4 et mt-8 pour le mobile (remonte le texte), md:py-20 md:mt-0 pour le desktop (intact) */}
-        <div className="relative z-10 max-w-4xl pt-4 pb-20 md:py-20 mt-8 md:mt-0">
+        {/* C'est ici que l'ajustement est fait (pt-16 mt-8 md:py-20 md:mt-0) pour équilibrer sur mobile */}
+        <div className="relative z-10 max-w-4xl pt-16 pb-20 md:py-20 mt-8 md:mt-0">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-bold tracking-widest uppercase md:hidden">
             Disponible pour de nouveaux défis
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
-          <p className="text-base md:text-lg text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
+          <p className="text-lg text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/votre-cv.pdf"
               download
-              className="w-full sm:w-auto px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-xs md:text-sm rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+              className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm  rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
             >
               Télécharger mon CV
             </a>
             <button
               onClick={() => scrollToSection('experience')}
-              className="w-full sm:w-auto px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full font-bold text-xs md:text-sm hover:bg-zinc-700 transition-all"
+              className="px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full font-bold hover:bg-zinc-700 transition-all"
             >
               Mes Réalisations
             </button>
@@ -222,10 +222,10 @@ export default function Portfolio() {
         </div>
 
         {/* BANDE DÉFILANTE SKILLS */}
-        <div className="absolute bottom-0 w-full py-4 md:py-6 bg-zinc-950/50 border-y border-zinc-800 backdrop-blur-sm overflow-hidden whitespace-nowrap">
+        <div className="absolute bottom-0 w-full py-6 bg-zinc-950/50 border-y border-zinc-800 backdrop-blur-sm overflow-hidden whitespace-nowrap">
           <div className="flex animate-infinite-scroll">
             {[...skillsList, ...skillsList].map((skill, i) => (
-              <div key={i} className="flex items-center gap-4 mx-8 text-zinc-400 uppercase tracking-widest text-[10px] md:text-xs font-mono">
+              <div key={i} className="flex items-center gap-4 mx-8 text-zinc-400 uppercase tracking-widest text-xs font-mono">
                 <Zap size={12} className="text-emerald-500" /> {skill}
               </div>
             ))}
@@ -241,28 +241,28 @@ export default function Portfolio() {
       `}</style>
 
       {/* SECTION A PROPOS */}
-      <section id="about" className="py-20 md:py-24 px-4 sm:px-6 bg-zinc-800/30">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div className="relative group w-[80%] mx-auto md:w-full">
+      <section id="about" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div className="relative group">
             <div className="relative z-10 rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-900 shadow-xl">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Luz" className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500 aspect-square" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
           </div>
           <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 flex items-center gap-3"><span className="text-emerald-500">01.</span> À propos de moi</h2>
-            <div className="space-y-4 text-zinc-300 text-base md:text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-emerald-500">01.</span> À propos de moi</h2>
+            <div className="space-y-4 text-zinc-300 text-lg leading-relaxed">
               <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse fullstack à Cotonou.</p>
               <p>Maîtrisant à la fois le frontend et le backend, je crée des applications web cohérentes, performantes et centrées sur l'utilisateur.</p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4 md:gap-6 pt-4">
+            <div className="grid sm:grid-cols-2 gap-6 pt-4">
               <div className="p-4 border-l-2 border-emerald-500 bg-zinc-900/50 rounded-r-lg">
-                <h3 className="text-zinc-100 font-bold mb-1 text-sm md:text-base">Vision</h3>
-                <p className="text-zinc-400 text-xs md:text-sm">Simplifier la vie via le web.</p>
+                <h3 className="text-zinc-100 font-bold mb-1">Vision</h3>
+                <p className="text-zinc-400 text-sm">Simplifier la vie via le web.</p>
               </div>
               <div className="p-4 border-l-2 border-emerald-500 bg-zinc-900/50 rounded-r-lg">
-                <h3 className="text-zinc-100 font-bold mb-1 text-sm md:text-base">Objectifs</h3>
-                <p className="text-zinc-400 text-xs md:text-sm">Bâtir des outils numériques à fort impact.</p>
+                <h3 className="text-zinc-100 font-bold mb-1">Objectifs</h3>
+                <p className="text-zinc-400 text-sm">Bâtir des outils numériques à fort impact.</p>
               </div>
             </div>
           </div>
@@ -270,10 +270,10 @@ export default function Portfolio() {
       </section>
 
       {/* SECTION SERVICES */}
-      <section id="skills" className="py-20 md:py-24 px-4 sm:px-6 bg-zinc-800/20 border-y border-zinc-700/50 text-center">
+      <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20 border-y border-zinc-700/50 text-center">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 md:mb-16 flex items-center justify-center gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 text-left">
+          <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               { 
                 icon: <Code />, 
@@ -291,10 +291,10 @@ export default function Portfolio() {
                 text: "Mise en place d'architectures robustes, sécurisées et responsives pour garantir des performances optimales sur tous les écrans." 
               }
             ].map((s, i) => (
-              <div key={i} className="p-6 md:p-8 bg-zinc-900/50 border border-zinc-700 rounded-2xl hover:border-emerald-500/30 transition-all">
-                <div className="text-emerald-500 mb-4 md:mb-6">{s.icon}</div>
-                <h3 className="font-bold mb-3 md:mb-4 uppercase text-xs md:text-sm tracking-widest">{s.title}</h3>
-                <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">{s.text}</p>
+              <div key={i} className="p-8 bg-zinc-900/50 border border-zinc-700 rounded-2xl hover:border-emerald-500/30 transition-all">
+                <div className="text-emerald-500 mb-6">{s.icon}</div>
+                <h3 className="text-xl font-bold mb-4 uppercase text-xs tracking-widest">{s.title}</h3>
+                <p className="text-zinc-400 text-sm leading-relaxed">{s.text}</p>
               </div>
             ))}
           </div>
@@ -302,49 +302,49 @@ export default function Portfolio() {
       </section>
 
       {/* SECTION FUSIONNÉE EXPÉRIENCE & PROJETS */}
-      <section id="experience" className="py-20 md:py-24 px-4 sm:px-6 bg-zinc-900">
+      <section id="experience" className="py-24 px-4 sm:px-6 bg-zinc-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 md:mb-16 flex items-center gap-3">
+          <h2 className="text-3xl font-bold mb-16 flex items-center gap-3">
             <span className="text-emerald-500 font-mono text-xl">03.</span> Expérience & Réalisations
           </h2>
 
           <div className="space-y-12 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-[1px] before:bg-zinc-800">
             {workHistory.map((exp, i) => (
-              <div key={i} className="relative pl-12 md:pl-16 group">
+              <div key={i} className="relative pl-16 group">
                 
                 {/* Ligne de temps (Timeline) */}
-                <div className="absolute left-6 top-1 md:top-0 w-4 h-4 rounded-full bg-zinc-900 border-2 border-emerald-500 z-10 group-hover:scale-125 transition-transform" />
+                <div className="absolute left-6 top-0 w-4 h-4 rounded-full bg-zinc-900 border-2 border-emerald-500 z-10 group-hover:scale-125 transition-transform" />
                 
                 {/* En-tête de l'expérience */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-lg md:text-xl font-bold text-zinc-100">{exp.role}</h3>
-                  <span className="text-emerald-500 font-mono text-xs md:text-sm mt-1 md:mt-0">{exp.period}</span>
+                  <h3 className="text-xl font-bold text-zinc-100">{exp.role}</h3>
+                  <span className="text-emerald-500 font-mono text-sm">{exp.period}</span>
                 </div>
-                <h4 className="text-zinc-400 font-medium mb-3 md:mb-4 flex items-center gap-2 text-emerald-500/80 text-sm md:text-base">
+                <h4 className="text-zinc-400 font-medium mb-4 flex items-center gap-2 text-emerald-500/80">
                    <Briefcase size={14} /> {exp.company}
                 </h4>
-                <p className="text-zinc-400 leading-relaxed max-w-2xl italic mb-6 text-sm md:text-base">{exp.desc}</p>
+                <p className="text-zinc-400 leading-relaxed max-w-2xl italic mb-6">{exp.desc}</p>
 
                 {/* Projets de cette expérience (Style Mockup) */}
                 {exp.projects.length > 0 && (
-                  <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-6">
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
                     {exp.projects.map((proj, idx) => (
                       <div key={idx} className="group/card relative">
-                        <div className="relative p-4 md:p-6 bg-zinc-800/40 border border-zinc-700 rounded-2xl group-hover/card:border-emerald-500/30 transition-all duration-500">
-                          <div className="flex gap-1.5 mb-3 md:mb-4 px-1">
-                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-zinc-600"/>
-                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-zinc-600"/>
-                            <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-zinc-600"/>
+                        <div className="relative p-6 bg-zinc-800/40 border border-zinc-700 rounded-2xl group-hover/card:border-emerald-500/30 transition-all duration-500">
+                          <div className="flex gap-1.5 mb-4 px-1">
+                            <div className="w-2 h-2 rounded-full bg-zinc-600"/>
+                            <div className="w-2 h-2 rounded-full bg-zinc-600"/>
+                            <div className="w-2 h-2 rounded-full bg-zinc-600"/>
                           </div>
                           <div className="relative rounded-lg overflow-hidden border border-zinc-700 bg-zinc-900 shadow-2xl transition-transform group-hover/card:-translate-y-2 duration-500 aspect-video">
                             <img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />
                             
                             {/* Overlay Titre/Desc/Flèche au survol */}
                             <div className="absolute inset-0 bg-zinc-950/80 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
-                              <h5 className="text-emerald-400 font-bold mb-1 text-sm md:text-base">{proj.title}</h5>
-                              <p className="text-[10px] md:text-xs text-zinc-300 mb-4">{proj.desc}</p>
-                              <a href={proj.link} target="_blank" rel="noreferrer" className="p-1.5 md:p-2 bg-emerald-500 text-zinc-950 rounded-full hover:bg-emerald-400 transition-colors">
-                                <ArrowUpRight size={18} className="md:w-5 md:h-5" />
+                              <h5 className="text-emerald-400 font-bold mb-1">{proj.title}</h5>
+                              <p className="text-xs text-zinc-300 mb-4">{proj.desc}</p>
+                              <a href={proj.link} target="_blank" rel="noreferrer" className="p-2 bg-emerald-500 text-zinc-950 rounded-full hover:bg-emerald-400 transition-colors">
+                                <ArrowUpRight size={20} />
                               </a>
                             </div>
                           </div>
@@ -355,11 +355,11 @@ export default function Portfolio() {
                 )}
 
                 {/* Puces de détails (Objectifs / Difficultés) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 pt-4 border-t border-zinc-800/50">
+                <div className="grid grid-cols-1 gap-y-3 gap-x-4 pt-4 border-t border-zinc-800/50">
                   {exp.details.map((detail, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs md:text-sm text-zinc-400 ">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0 mt-1.5" />
-                      <span>{detail}</span>
+                    <div key={idx} className="flex items-center gap-2 text-sm text-zinc-400 ">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
+                      {detail}
                     </div>
                   ))}
                 </div>
@@ -371,16 +371,16 @@ export default function Portfolio() {
       </section>
 
       {/* SECTION CONTACT */}
-      <section id="contact" className="py-20 md:py-24 px-4 sm:px-6 bg-emerald-500/70 relative text-center">
+      <section id="contact" className="py-24 px-4 sm:px-6 bg-emerald-500/70 relative text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 tracking-tighter text-zinc-950">Prêt à collaborer ?</h2>
-          <p className="text-zinc-900 mb-8 md:mb-12 text-base md:text-lg font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-zinc-950">Prêt à collaborer ?</h2>
+          <p className="text-zinc-900 mb-12 text-lg font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
-            <a href="mailto:luz.assogba@example.com" className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-3 text-xs md:text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="mailto:luz.assogba@example.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">
               <Send size={18} /> Envoyer un message
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-3 bg-zinc-100 text-zinc-950 rounded-full font-medium hover:bg-white transition-all font-black text-xs md:text-sm tracking-widest">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-10 py-3 bg-zinc-100 text-zinc-950 rounded-full font-medium hover:bg-white transition-all font-black text-xs tracking-widest">
               <Linkedin size={18} /> Linkedin
             </a>
           </div>
@@ -392,7 +392,7 @@ export default function Portfolio() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
         <div className="relative z-10">
-           <p className="text-zinc-500 text-[9px] md:text-[10px] uppercase font-bold tracking-[0.3em] hover:text-emerald-500/80 transition-colors cursor-default">
+           <p className="text-zinc-500 text-[10px] uppercase font-bold tracking-[0.3em] hover:text-emerald-500/80 transition-colors cursor-default">
               Luz-clarita ASSOGBA — Fullstack Excellence © 2026
            </p>
         </div>

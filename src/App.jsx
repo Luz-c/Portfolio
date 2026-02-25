@@ -147,7 +147,7 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* MENU MOBILE EN FORME DE PILULE (Bouton section active + Hamburger) - TAILLE LÉGÈREMENT AUGMENTÉE */}
+      {/* MENU MOBILE EN FORME DE PILULE (Bouton section active + Hamburger) */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 md:hidden w-fit">
         <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-zinc-900/95 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/60 backdrop-blur-md border-zinc-700/50'}`}>
           
@@ -196,7 +196,8 @@ export default function Portfolio() {
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-4xl py-20 mt-12 md:mt-0">
+        {/* Espace ajusté ici : pt-4 et mt-8 pour le mobile (remonte le texte), md:py-20 md:mt-0 pour le desktop (intact) */}
+        <div className="relative z-10 max-w-4xl pt-4 pb-20 md:py-20 mt-8 md:mt-0">
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-bold tracking-widest uppercase md:hidden">
             Disponible pour de nouveaux défis
           </div>

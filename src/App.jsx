@@ -13,7 +13,6 @@ export default function Portfolio() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      // Ordre mis à jour ici pour le scroll
       const sections = ['home', 'about', 'skills', 'experience', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -103,10 +102,10 @@ export default function Portfolio() {
   return (
     <div className="relative bg-zinc-900 text-zinc-100 min-h-screen font-sans selection:bg-emerald-500/30 overflow-x-hidden">
 
-      {/* HEADER : ÉLÉMENTS STATIQUES GAUCHE/DROITE (Cadrés avec la largeur du contenu) */}
-      <div className="absolute top-6 left-0 w-full z-40 hidden lg:flex justify-center pointer-events-none">
+      {/* HEADER DESKTOP : ÉLÉMENTS STATIQUES GAUCHE/DROITE (Cadrés avec la largeur du contenu) */}
+      <div className="absolute top-6 left-0 w-full z-40 hidden md:flex justify-center pointer-events-none">
         <div className="w-full max-w-6xl flex justify-between items-start px-6">
-          {/* GAUCHE : Statut Ouvert (Agrandit à text-sm et padding ajusté) */}
+          {/* GAUCHE : Statut Ouvert */}
           <div className="pointer-events-auto">
             <div className="flex items-center gap-2.5 px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-bold text-emerald-400 backdrop-blur-md">
               <span className="relative flex h-2.5 w-2.5">
@@ -117,7 +116,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* DROITE : Bouton CV (Le même style que celui du Hero) */}
+          {/* DROITE : Bouton CV */}
           <div className="pointer-events-auto">
             <a
               href="/votre-cv.pdf"
@@ -130,8 +129,8 @@ export default function Portfolio() {
         </div>
       </div>
 
-      {/* CENTRE : MENU FLOTTANT (Fixed = suit le scroll) */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4 w-full max-w-fit">
+      {/* CENTRE : MENU FLOTTANT DESKTOP (Masqué sur mobile avec md:flex) */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex px-4 w-full max-w-fit">
         <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/40 border-zinc-700/50'
           }`}>
           {['home', 'about', 'skills', 'experience', 'contact'].map((item) => (
@@ -145,6 +144,48 @@ export default function Portfolio() {
             </button>
           ))}
         </div>
+      </nav>
+
+      {/* NOUVEAU : MENU MOBILE (Visible uniquement sur mobile avec md:hidden) */}
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 md:hidden w-fit">
+        <div className={`flex items-center gap-1 p-1.5 rounded-full border transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-zinc-900/95 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/60 backdrop-blur-md border-zinc-700/50'}`}>
+          
+          {/* Bouton de la section active (Change au scroll) */}
+          <button 
+            onClick={() => scrollToSection(activeSection)}
+            className="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500 text-zinc-950 transition-all shadow-[0_0_10px_rgba(16,185,129,0.2)]"
+          >
+            {activeSection === 'home' ? 'Accueil' : activeSection === 'about' ? 'À propos' : activeSection === 'skills' ? 'Services' : activeSection === 'experience' ? 'Expérience' : 'Contact'}
+          </button>
+
+          {/* Icône Menu Hamburger */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            className="p-1.5 text-zinc-200 hover:text-white hover:bg-zinc-800 rounded-full transition-colors mx-1 focus:outline-none"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+
+        {/* Dropdown du menu mobile */}
+        {isMenuOpen && (
+          <div className="absolute top-14 left-1/2 -translate-x-1/2 w-[220px] bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-2xl p-2 shadow-2xl flex flex-col gap-1">
+            {['home', 'about', 'skills', 'experience', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => {
+                  scrollToSection(item);
+                  setIsMenuOpen(false);
+                }}
+                className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-widest text-left transition-all ${
+                  activeSection === item ? 'bg-emerald-500/10 text-emerald-500' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-100'
+                }`}
+              >
+                {item === 'home' ? 'Accueil' : item === 'about' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : 'Contact'}
+              </button>
+            ))}
+          </div>
+        )}
       </nav>
 
       {/* HERO SECTION */}
@@ -227,7 +268,7 @@ export default function Portfolio() {
       {/* SECTION SERVICES */}
       <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20 border-y border-zinc-700/50 text-center">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16 flex items-center gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
+          <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               { 

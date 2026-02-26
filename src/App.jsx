@@ -245,7 +245,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative group">
             <div className="relative z-10 rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-900 shadow-xl">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Luz" className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500 aspect-square" />
+              <img src="/assets/Gemini_Generated_Image_wfpcicwfpcicwfpc.png" alt="Luz" className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500 aspect-square" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
           </div>

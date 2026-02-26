@@ -100,10 +100,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="relative bg-zinc-900 text-zinc-100 min-h-screen font-sans selection:bg-emerald-500/30 overflow-x-hidden">
+    <div className="relative bg-zinc-900 text-zinc-100 min-h-screen  selection:bg-emerald-500/30 overflow-x-hidden">
 
       {/* HEADER DESKTOP */}
-      <div className="absolute top-6 left-0 w-full z-40 hidden md:flex justify-center pointer-events-none">
+      <div className="absolute top-6 left-0 w-full z-40 hidden lg:flex justify-center pointer-events-none">
         <div className="w-full max-w-6xl flex justify-between items-start px-6">
           <div className="pointer-events-auto">
             <div className="flex items-center gap-2.5 px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-bold text-emerald-400 backdrop-blur-md">

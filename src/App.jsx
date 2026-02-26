@@ -271,7 +271,7 @@ export default function Portfolio() {
 
       {/* SECTION SERVICES */}
       <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20 border-y border-zinc-700/50 text-center">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[

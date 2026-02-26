@@ -371,7 +371,7 @@ export default function Portfolio() {
       </section>
 
       {/* SECTION CONTACT */}
-      <section id="contact" className="py-24 px-4 sm:px-6 bg-emerald-500/70 relative text-center">
+      <section id="contact" className="py-24 px-4 sm:px-6 bg-emerald-200/50 relative text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-zinc-950">Prêt à collaborer ?</h2>
           <p className="text-zinc-900 mb-12 text-lg font-medium">Actuellement en quête de nouveaux projets stimulants.</p>

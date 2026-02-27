@@ -45,7 +45,7 @@ export default function Portfolio() {
       period: "2026 - Présent",
       desc: "Développement et maintenance de solutions web complètes pour l'inclusion technologique.",
       projects: [
-        { title: "Exam Easy", image: "/assets/Capture d'écran 2026-02-25 174752.png", desc: "Plateforme d'examen sécurisée.", link: "https://safen.womenintech.bj/" }
+        { title: "SAFEN 2026", image: "/assets/Capture d'écran 2026-02-25 174752.png", desc: "Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique.", link: "https://safen.womenintech.bj/" }
       ],
       details: ["Optimisation et intégration du site web", "Responsive design", "Inclusion numérique", "Correction automatique", "Gestion sécurisée", "UX moderne"]
     },

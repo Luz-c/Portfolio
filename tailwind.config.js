@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Baloo Chettan 2', 'cursive'],
+        sans: ['Kanit', 'sans-serif'],
       },
     },
   },

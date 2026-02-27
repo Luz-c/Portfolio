@@ -13,7 +13,7 @@ export default function Portfolio() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      const sections = ['home', 'about', 'skills', 'experience', 'contact'];
+      const sections = ['home', 'À propos', 'skills', 'experience', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -36,7 +36,7 @@ export default function Portfolio() {
     }
   };
 
-  const skillsList = ["React.js", "Node.js", "Express", "MongoDB", "JavaScript", "TypeScript", "Tailwind CSS", "Figma", "Git & GitHub", "REST APIs"];
+  const skillsList = ["React.js", "Node.js", "Express", "MongoDB", "JavaScript", "TypeScript", "Tailwind CSS", "Figma", "Git & GitHub", "REST APIs", "WordPress", "SEO", "Laravel", "Django"];
 
   const workHistory = [
     {
@@ -131,14 +131,14 @@ export default function Portfolio() {
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex px-4 w-full max-w-fit">
         <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/40 border-zinc-700/50'
           }`}>
-          {['home', 'about', 'skills', 'experience', 'contact'].map((item) => (
+          {['home', 'À propos', 'skills', 'experience', 'contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
               className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${activeSection === item ? 'bg-emerald-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
                 }`}
             >
-              {item === 'home' ? 'Accueil' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : item}
+              {item === 'home' ? 'Accueil' : item === 'À propos' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : item}
             </button>
           ))}
         </div>
@@ -151,7 +151,7 @@ export default function Portfolio() {
             onClick={() => scrollToSection(activeSection)}
             className="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500 text-zinc-950 transition-all shadow-[0_0_10px_rgba(16,185,129,0.2)]"
           >
-            {activeSection === 'home' ? 'Accueil' : activeSection === 'about' ? 'À propos' : activeSection === 'skills' ? 'Services' : activeSection === 'experience' ? 'Expérience' : 'Contact'}
+            {activeSection === 'home' ? 'Accueil' : activeSection === 'À propos' ? 'À propos' : activeSection === 'skills' ? 'Services' : activeSection === 'experience' ? 'Expérience' : 'Contact'}
           </button>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -163,7 +163,7 @@ export default function Portfolio() {
 
         {isMenuOpen && (
           <div className="absolute top-[72px] left-1/2 -translate-x-1/2 w-[250px] bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-2xl p-2.5 shadow-2xl flex flex-col gap-1 animate-fade-in">
-            {['home', 'about', 'skills', 'experience', 'contact'].map((item) => (
+            {['home', 'À propos', 'skills', 'experience', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => {
@@ -173,7 +173,7 @@ export default function Portfolio() {
                 className={`px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest text-left transition-all ${activeSection === item ? 'bg-emerald-500/10 text-emerald-500' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-100'
                   }`}
               >
-                {item === 'home' ? 'Accueil' : item === 'about' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : 'Contact'}
+                {item === 'home' ? 'Accueil' : item === 'À propos' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : 'Contact'}
               </button>
             ))}
           </div>
@@ -230,7 +230,7 @@ export default function Portfolio() {
       `}</style>
 
       {/* SECTION A PROPOS */}
-      <section id="about" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
+      <section id="À propos" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative group">
             <div className="relative z-10 group rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-900 shadow-xl">
@@ -262,7 +262,7 @@ export default function Portfolio() {
       {/* SECTION SERVICES */}
       <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20  border-zinc-700/50 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span> Expertises</h2>
+          <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span>Services</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               {

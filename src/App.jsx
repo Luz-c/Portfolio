@@ -191,7 +191,7 @@ export default function Portfolio() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="/assets/text.pdf"
+              href="/assets/CV_ASSOGBA_Luz-clarita.pdf"
               download
               className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm  rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
             >

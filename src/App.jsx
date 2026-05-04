@@ -36,7 +36,23 @@ export default function Portfolio() {
     }
   };
 
-  const skillsList = ["React.js", "Node.js", "Express", "MongoDB", "JavaScript", "TypeScript", "Tailwind CSS", "Figma", "Git & GitHub", "REST APIs", "WordPress", "SEO", "Laravel", "Django"];
+  // Liste d'objets avec les vrais logos (via SimpleIcons)
+  const skillsList = [
+    { name: "React.js", icon: "https://cdn.simpleicons.org/react" },
+    { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+    { name: "Express", icon: "https://cdn.simpleicons.org/express/white" }, // Maintenu en blanc (officiel = noir)
+    { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
+    { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
+    { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+    { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+    { name: "Figma", icon: "https://cdn.simpleicons.org/figma" },
+    { name: "Git & GitHub", icon: "https://cdn.simpleicons.org/github/white" }, // Maintenu en blanc (officiel = noir)
+    { name: "REST APIs", icon: "https://cdn.simpleicons.org/postman" },
+    { name: "WordPress", icon: "https://cdn.simpleicons.org/wordpress" },
+    { name: "SEO", icon: "https://cdn.simpleicons.org/googlesearchconsole" },
+    { name: "Laravel", icon: "https://cdn.simpleicons.org/laravel" },
+    { name: "Django", icon: "https://cdn.simpleicons.org/django/white" } // Maintenu en blanc (officiel = vert très foncé)
+  ];
 
   const workHistory = [
     {
@@ -45,7 +61,9 @@ export default function Portfolio() {
       period: "2026 - Présent",
       desc: "Développement et maintenance de solutions web complètes pour l'inclusion technologique.",
       projects: [
-        { title: "SAFEN 2026", image: "/assets/Capture d'écran 2026-02-25 174752.png", desc: "Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique.", link: "https://safen.womenintech.bj/" }
+        { title: "SAFEN 2026", image: "/assets/Capture d'écran 2026-02-25 174752.png", desc: "Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique.", link: "https://safen.womenintech.bj/" },
+        { title: "Guid'elles", image: "/assets/guid.png", desc: "Programme de mentorat", link: "https://womenintech.bj/guidelles/" }
+
       ],
       details: ["Optimisation et intégration du site web", "Responsive design", "Inclusion numérique", "Correction automatique", "Gestion sécurisée", "UX moderne"]
     },
@@ -56,7 +74,9 @@ export default function Portfolio() {
       desc: "Conception d'interfaces dynamiques et intégration de maquettes pour une startup innovante.",
       projects: [
         { title: "Intégration de maquette", image: "/assets/Capture d'écran 2026-02-25 175035.png", desc: "Intégration de maquettes pour le startup Ashita skills.", link: "https://inovtest.ashitaskills.com/" },
-        { title: "Proposition de design", image: "/assets/Capture d'écran 2026-02-24 112812.png", desc: "Page contact pour le startup Ashita skills.", link: "https://inovtest.ashitaskills.com/contact/" }
+        { title: "Proposition de design", image: "/assets/Capture d'écran 2026-02-24 112812.png", desc: "Page contact pour le startup Ashita skills.", link: "https://inovtest.ashitaskills.com/contact/" },
+        { title: "Développement d'une landing page", image: "/assets/ashit.png", desc: "Landing page pour l'inscription aux ateliers en présentiel", link: "https://ashita.ct.ws/?i=1" }
+
       ],
       details: ["Collaboration à distance", "Intégration UI/UX", "Refonte de pages", "Optimisation SEO", "Accessibilité web"]
     },
@@ -102,31 +122,7 @@ export default function Portfolio() {
   return (
     <div className="relative bg-zinc-900 text-zinc-100 min-h-screen  selection:bg-emerald-500/30 overflow-x-hidden">
 
-      {/* HEADER DESKTOP */}
-      <div className="absolute top-6 left-0 w-full z-40 hidden justify-center pointer-events-none">
-        <div className="w-full max-w-4xl flex justify-between items-start px-6">
-          <div className="pointer-events-auto">
-            <div className="flex items-center gap-2.5 px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-bold text-emerald-400 backdrop-blur-md">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </span>
-              Ouvert au travail
-            </div>
-          </div>
-
-          <div className="pointer-events-auto">
-            <a
-              href="/votre-cv.pdf"
-              download
-              className="px-8 py-2.5 bg-emerald-500 text-zinc-950 font-medium text-sm rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
-            >
-              Télécharger mon CV
-            </a>
-          </div>
-        </div>
-      </div>
-
+      
       {/* CENTRE : MENU FLOTTANT DESKTOP */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex px-4 w-full max-w-fit">
         <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/40 border-zinc-700/50'
@@ -195,7 +191,7 @@ export default function Portfolio() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="/votre-cv.pdf"
+              href="/assets/text.pdf"
               download
               className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm  rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
             >
@@ -210,12 +206,20 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* BANDE DÉFILANTE SKILLS */}
-        <div className="absolute bottom-0 w-full py-6 bg-zinc-950/50 border-y border-zinc-800 backdrop-blur-sm overflow-hidden whitespace-nowrap">
-          <div className="flex animate-infinite-scroll">
+        {/* BANDE DÉFILANTE SKILLS - LOGOS EN COULEURS RÉELLES */}
+        <div className="absolute bottom-0 w-full py-5 bg-zinc-950/80 border-y border-zinc-800 backdrop-blur-md overflow-hidden whitespace-nowrap">
+          <div className="flex animate-infinite-scroll hover:[animation-play-state:paused]">
             {[...skillsList, ...skillsList].map((skill, i) => (
-              <div key={i} className="flex items-center gap-4 mx-8 text-zinc-400 uppercase tracking-widest text-xs font-mono">
-                <Zap size={12} className="text-emerald-500" /> {skill}
+              <div key={i} className="flex items-center gap-3 mx-8 group cursor-default">
+                <img 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  /* Classes mises à jour : plus de grayscale, juste un petit effet de zoom (scale) au survol */
+                  className="w-5 h-5 drop-shadow-md transition-transform duration-300 group-hover:scale-110" 
+                />
+                <span className="text-zinc-400 uppercase tracking-widest text-xs font-mono group-hover:text-zinc-100 transition-colors duration-300">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>
@@ -354,22 +358,17 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* SECTION CONTACT - STYLE COPIÉ SUR HERO */}
+      {/* SECTION CONTACT */}
       <section id="contact" className="py-24 px-4 sm:px-6 relative overflow-hidden bg-zinc-800/20  from-zinc-900 via-zinc-800 to-zinc-900 text-center">
-        {/* Grille et Halos identiques au Hero */}
-        {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/15 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-500/15 rounded-full blur-[100px] pointer-events-none" /> */}
-
         <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
           <p className="text-zinc-400 mb-12 text-lg font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="mailto:luz.assogba@example.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">
+            <a href="mailto:sandrelleassogba6@gmail.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">
               <Send size={18} /> Envoyer un message
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-10 py-3 bg-emerald-500 text-zinc-950 rounded-full font-medium hover:bg-emerald-400 transition-all font-bold text-xs tracking-widest">
+            <a href="https://www.linkedin.com/in/sandrelle-assogba/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-10 py-3 bg-emerald-500 text-zinc-950 rounded-full font-medium hover:bg-emerald-400 transition-all font-bold text-xs tracking-widest">
               <Linkedin size={18} /> Linkedin
             </a>
           </div>

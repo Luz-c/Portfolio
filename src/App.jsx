@@ -124,13 +124,13 @@ export default function Portfolio() {
 
       {/* CENTRE : MENU FLOTTANT DESKTOP */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex px-4 w-full max-w-fit">
-        <div className={`flex items-center gap-2 p-1.5 rounded-lg border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700' : 'bg-zinc-800/40 border-zinc-700/50'
+        <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/40 border-zinc-700/50'
           }`}>
           {['home', 'À propos', 'skills', 'experience', 'contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
-              className={`px-4 py-2 rounded-md text-xs font-bold uppercase tracking-widest transition-all ${activeSection === item ? 'bg-emerald-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${activeSection === item ? 'bg-emerald-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
                 }`}
             >
               {item === 'home' ? 'Accueil' : item === 'À propos' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : item}
@@ -141,23 +141,23 @@ export default function Portfolio() {
 
       {/* MENU MOBILE */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 md:hidden w-fit">
-        <div className={`flex items-center gap-2 p-1.5 rounded-lg border transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-zinc-900/95 backdrop-blur-xl border-zinc-700' : 'bg-zinc-800/60 backdrop-blur-md border-zinc-700/50'}`}>
+        <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-zinc-900/95 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/60 backdrop-blur-md border-zinc-700/50'}`}>
           <button
             onClick={() => scrollToSection(activeSection)}
-            className="px-5 py-2 rounded-md text-xs font-bold uppercase tracking-widest bg-emerald-500 text-zinc-950 transition-all"
+            className="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-500 text-zinc-950 transition-all shadow-[0_0_10px_rgba(16,185,129,0.2)]"
           >
             {activeSection === 'home' ? 'Accueil' : activeSection === 'À propos' ? 'À propos' : activeSection === 'skills' ? 'Services' : activeSection === 'experience' ? 'Expérience' : 'Contact'}
           </button>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-zinc-200 hover:text-white hover:bg-zinc-800 rounded-md transition-colors focus:outline-none"
+            className="p-2 text-zinc-200 hover:text-white hover:bg-zinc-800 rounded-full transition-colors focus:outline-none"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-[72px] left-1/2 -translate-x-1/2 w-[250px] bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-lg p-2.5 flex flex-col gap-1 animate-fade-in">
+          <div className="absolute top-[72px] left-1/2 -translate-x-1/2 w-[250px] bg-zinc-900/95 backdrop-blur-xl border border-zinc-700 rounded-2xl p-2.5 shadow-2xl flex flex-col gap-1 animate-fade-in">
             {['home', 'À propos', 'skills', 'experience', 'contact'].map((item) => (
               <button
                 key={item}
@@ -165,7 +165,7 @@ export default function Portfolio() {
                   scrollToSection(item);
                   setIsMenuOpen(false);
                 }}
-                className={`px-5 py-3.5 rounded-md text-xs font-bold uppercase tracking-widest text-left transition-all ${activeSection === item ? 'bg-emerald-500/10 text-emerald-500' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-100'
+                className={`px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-widest text-left transition-all ${activeSection === item ? 'bg-emerald-500/10 text-emerald-500' : 'text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-100'
                   }`}
               >
                 {item === 'home' ? 'Accueil' : item === 'À propos' ? 'À propos' : item === 'skills' ? 'Services' : item === 'experience' ? 'Expérience' : 'Contact'}
@@ -182,17 +182,13 @@ export default function Portfolio() {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-7xl pt-10 pb-16 md:py-20 mt-4 md:mt-0">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 rounded border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-semibold tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Disponible pour de nouveaux défis
-          </div>
           <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-300 mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={() => scrollToSection('experience')}
-              className="px-8 py-3 bg-emerald-500 text-zinc-950 font-semibold text-xs uppercase tracking-wider rounded-md hover:bg-emerald-400 transition-all shadow-none"
+              className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm rounded-full hover:bg-emerald-400 transition-all shadow-sm"
             >
               Mes Réalisations
             </button>
@@ -246,7 +242,7 @@ export default function Portfolio() {
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">À propos de moi</h2>
-            <div className="space-y-6 text-zinc-300 text-xl leading-relaxed">
+            <div className="space-y-6 text-zinc-300 text-base md:text-xl leading-relaxed">
               <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse fullstack à Cotonou.</p>
               <p>Maîtrisant à la fois le frontend et le backend, je crée des applications web cohérentes, performantes et centrées sur l'utilisateur.</p>
             </div>
@@ -254,7 +250,7 @@ export default function Portfolio() {
               <a
                 href="/assets/CV_ASSOGBA_Luz-clarita.pdf"
                 download
-                className="inline-flex px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-md font-bold hover:bg-zinc-700 transition-all items-center gap-3"
+                className="inline-flex px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full font-bold hover:bg-zinc-700 transition-all items-center gap-3 shadow-sm"
               >
                 Télécharger mon CV
               </a>
@@ -365,11 +361,11 @@ export default function Portfolio() {
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
           <p className="text-zinc-400 mb-10 md:mb-12 text-lg md:text-2xl font-medium px-4 md:px-0">Actuellement en quête de nouveaux projets stimulants.</p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6 px-4">
-            <a href="mailto:sandrelleassogba6@gmail.com" className="flex items-center justify-center gap-3 px-8 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-md font-medium hover:bg-zinc-800 transition-all tracking-widest">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="mailto:sandrelleassogba6@gmail.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">
               <Send size={18} /> Envoyer un message
             </a>
-            <a href="https://www.linkedin.com/in/sandrelle-assogba/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-8 py-3 bg-emerald-500 text-zinc-950 rounded-md font-medium hover:bg-emerald-400 transition-all font-bold text-xs tracking-widest">
+            <a href="https://www.linkedin.com/in/sandrelle-assogba/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 px-10 py-3 bg-emerald-500 text-zinc-950 rounded-full font-medium hover:bg-emerald-400 transition-all font-bold text-xs tracking-widest">
               <Linkedin size={18} /> Linkedin
             </a>
           </div>

@@ -231,7 +231,7 @@ export default function Portfolio() {
       `}</style>
 
       {/* SECTION A PROPOS */}
-      <section id="À propos" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
+      <section id="À propos" className="py-24 px-4 sm:px-6 bg-zinc-800/20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative group">
             <div className="relative z-10 group rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden border border-zinc-700 bg-zinc-900">
@@ -292,7 +292,7 @@ export default function Portfolio() {
       </section>
 
       {/* SECTION FUSIONNÉE EXPÉRIENCE & PROJETS */}
-      <section id="experience" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
+      <section id="experience" className="py-24 px-4 sm:px-6 bg-zinc-800/20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-16">
             Expérience & Réalisations

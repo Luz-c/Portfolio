@@ -185,8 +185,8 @@ export default function Portfolio() {
           <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-bold tracking-widest uppercase md:hidden">
             Disponible pour de nouveaux défis
           </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
-          <p className="text-xl md:text-2xl text-zinc-300 mb-10 max-w-3xl mx-auto leading-relaxed">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
+          <p className="text-lg md:text-xl lg:text-2xl text-zinc-300 mb-10 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
@@ -235,7 +235,7 @@ export default function Portfolio() {
 
       {/* SECTION A PROPOS */}
       <section id="À propos" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative group">
             <div className="relative z-10 group rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden border border-zinc-700 bg-zinc-900">
               <img src="/assets/ChatGPT Image 27 févr. 2026, 20_20_04.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
@@ -244,7 +244,7 @@ export default function Portfolio() {
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-none rounded-tl-[4rem] rounded-br-[4rem] -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
           </div>
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 flex items-center gap-3">À propos de moi</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 flex items-center gap-3">À propos de moi</h2>
             <div className="space-y-6 text-zinc-300 text-xl leading-relaxed">
               <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse fullstack à Cotonou.</p>
               <p>Maîtrisant à la fois le frontend et le backend, je crée des applications web cohérentes, performantes et centrées sur l'utilisateur.</p>
@@ -265,7 +265,7 @@ export default function Portfolio() {
       {/* SECTION SERVICES */}
       <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20  border-zinc-700/50 text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 flex items-center gap-3">Services</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-16 flex items-center gap-3">Services</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               {
@@ -297,42 +297,42 @@ export default function Portfolio() {
       {/* SECTION FUSIONNÉE EXPÉRIENCE & PROJETS */}
       <section id="experience" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 flex items-center gap-3">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-16 flex items-center gap-3">
             Expérience & Réalisations
           </h2>
 
-          <div className="space-y-32 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-[1px] before:bg-zinc-800">
+          <div className="space-y-16 md:space-y-32 relative before:absolute before:inset-0 before:left-6 md:before:left-8 before:h-full before:w-[1px] before:bg-zinc-800">
             {workHistory.map((exp, i) => (
-              <div key={i} className="relative pl-16 group">
-                <div className="absolute left-6 top-0 w-4 h-4 rounded-full bg-zinc-900 border-2 border-emerald-500 z-10 group-hover:scale-125 transition-transform" />
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-zinc-100">{exp.role}</h3>
-                  <span className="text-emerald-500 font-mono text-base md:text-lg">{exp.period}</span>
+              <div key={i} className="relative pl-12 md:pl-16 group">
+                <div className="absolute left-4 md:left-6 top-0 w-4 h-4 rounded-full bg-zinc-900 border-2 border-emerald-500 z-10 group-hover:scale-125 transition-transform" />
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-1 md:gap-0">
+                  <h3 className="text-xl md:text-2xl font-bold text-zinc-100">{exp.role}</h3>
+                  <span className="text-emerald-500 font-mono text-sm md:text-lg">{exp.period}</span>
                 </div>
                 <h4 className="text-zinc-400 text-lg font-medium mb-8 flex items-center gap-2 text-emerald-500/80">
                   - {exp.company}
                 </h4>
 
                 {exp.projects.length > 0 && (
-                  <div className="flex flex-col gap-24 mb-8">
+                  <div className="flex flex-col gap-16 mb-8">
                     {exp.projects.map((proj, idx) => (
                       <div key={idx} className={`group/project flex flex-col items-stretch gap-6 md:gap-10 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                         
                         {/* Image Card */}
-                        <div className="relative group/image w-full md:w-[60%] aspect-video border border-zinc-700/50 rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden shadow-sm group-hover/project:border-emerald-500/30 transition-all duration-500">
+                        <div className="relative group/image w-full md:w-[60%] aspect-video border border-zinc-700/50 rounded-none rounded-tl-[2rem] rounded-br-[2rem] md:rounded-tl-[4rem] md:rounded-br-[4rem] overflow-hidden shadow-sm group-hover/project:border-emerald-500/30 transition-all duration-500">
                           <img src={proj.image} alt={proj.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover/project:scale-105" />
                           
                           {/* Filtre conservé et renforcé */}
                           <div className="absolute inset-0 bg-emerald-500/40 group-hover/project:bg-transparent mix-blend-multiply transition-colors duration-500 pointer-events-none"></div>
 
                           {/* Flèche centrée sur l'image (visible au hover de l'image uniquement) */}
-                          <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 flex items-center justify-center bg-zinc-950/60 backdrop-blur-md rounded-full border border-white/20 text-emerald-400 opacity-0 scale-75 group-hover/image:opacity-100 group-hover/image:scale-100 hover:!bg-emerald-500 hover:!text-zinc-950 transition-all duration-500 z-10 shadow-2xl">
-                            <ArrowUpRight size={28} strokeWidth={2.5} />
+                          <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-zinc-950/60 backdrop-blur-md rounded-full border border-white/20 text-emerald-400 opacity-0 scale-75 group-hover/image:opacity-100 group-hover/image:scale-100 hover:!bg-emerald-500 hover:!text-zinc-950 transition-all duration-500 z-10 shadow-2xl">
+                            <ArrowUpRight size={24} className="md:w-7 md:h-7" strokeWidth={2.5} />
                           </a>
                         </div>
                         
                         {/* Details Card */}
-                        <div className="relative w-full md:w-[40%] p-8 md:p-10 bg-zinc-800/20 border border-zinc-700/30 rounded-none rounded-tl-[4rem] rounded-br-[4rem] flex flex-col justify-center shadow-sm group-hover/project:border-emerald-500/20 transition-all duration-500">
+                        <div className="relative w-full md:w-[40%] p-6 md:p-10 bg-zinc-800/20 border border-zinc-700/30 rounded-none rounded-tl-[2rem] rounded-br-[2rem] md:rounded-tl-[4rem] md:rounded-br-[4rem] flex flex-col justify-center shadow-sm group-hover/project:border-emerald-500/20 transition-all duration-500">
                           
                           {/* Flèche glassmorphism déplacée ici */}
                           <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center bg-zinc-900/50 backdrop-blur-md rounded-full border border-white/10 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-950 hover:scale-110 transition-all duration-300 z-10 shadow-sm">
@@ -361,8 +361,8 @@ export default function Portfolio() {
       {/* SECTION CONTACT */}
       <section id="contact" className="py-24 px-4 sm:px-6 relative overflow-hidden bg-zinc-800/20  from-zinc-900 via-zinc-800 to-zinc-900 text-center">
         <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
-          <p className="text-zinc-400 mb-12 text-xl md:text-2xl font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
+          <p className="text-zinc-400 mb-10 md:mb-12 text-lg md:text-2xl font-medium px-4 md:px-0">Actuellement en quête de nouveaux projets stimulants.</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a href="mailto:sandrelleassogba6@gmail.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">

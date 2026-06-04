@@ -122,7 +122,6 @@ export default function Portfolio() {
   return (
     <div className="relative bg-zinc-900 text-zinc-100 min-h-screen  selection:bg-emerald-500/30 overflow-x-hidden">
 
-      
       {/* CENTRE : MENU FLOTTANT DESKTOP */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:flex px-4 w-full max-w-fit">
         <div className={`flex items-center gap-2 p-2 rounded-full border transition-all duration-300 ${scrolled ? 'bg-zinc-900/80 backdrop-blur-xl border-zinc-700 shadow-2xl' : 'bg-zinc-800/40 border-zinc-700/50'
@@ -182,46 +181,47 @@ export default function Portfolio() {
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-4xl pt-16 pb-20 md:py-20 mt-8 md:mt-0">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-xs font-bold tracking-widest uppercase md:hidden">
+        <div className="relative z-10 max-w-7xl pt-16 pb-20 md:py-20 mt-8 md:mt-0">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-bold tracking-widest uppercase md:hidden">
             Disponible pour de nouveaux défis
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
-          <p className="text-lg text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tight">Développeuse Web <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent mt-2">Fullstack</span></h1>
+          <p className="text-xl md:text-2xl text-zinc-300 mb-10 max-w-3xl mx-auto leading-relaxed">Je conçois des solutions web complètes, de l'interface utilisateur à la gestion des données.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/assets/CV_ASSOGBA_Luz-clarita.pdf"
-              download
-              className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm  rounded-full hover:bg-emerald-400 transition-all hover:-translate-y-1 flex items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
-            >
-              Télécharger mon CV
-            </a>
             <button
               onClick={() => scrollToSection('experience')}
-              className="px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full font-bold hover:bg-zinc-700 transition-all"
+              className="px-8 py-3 bg-emerald-500 text-zinc-950 font-medium text-sm rounded-full hover:bg-emerald-400 transition-all shadow-sm"
             >
               Mes Réalisations
             </button>
           </div>
-        </div>
 
-        {/* BANDE DÉFILANTE SKILLS - LOGOS EN COULEURS RÉELLES */}
-        <div className="absolute bottom-0 w-full py-5 bg-zinc-950/80 border-y border-zinc-800 backdrop-blur-md overflow-hidden whitespace-nowrap">
-          <div className="flex animate-infinite-scroll hover:[animation-play-state:paused]">
-            {[...skillsList, ...skillsList].map((skill, i) => (
-              <div key={i} className="flex items-center gap-3 mx-8 group cursor-default">
-                <img 
-                  src={skill.icon} 
-                  alt={skill.name} 
-                  /* Classes mises à jour : plus de grayscale, juste un petit effet de zoom (scale) au survol */
-                  className="w-5 h-5 drop-shadow-md transition-transform duration-300 group-hover:scale-110" 
-                />
-                <span className="text-zinc-400 uppercase tracking-widest text-xs font-mono group-hover:text-zinc-100 transition-colors duration-300">
-                  {skill.name}
-                </span>
+          {/* BANDE DÉFILANTE SKILLS - CONTENUE */}
+          <div className="mt-16 w-full max-w-7xl mx-auto py-4 bg-zinc-900/40 border border-zinc-800/60 rounded-2xl backdrop-blur-md overflow-hidden whitespace-nowrap shadow-sm">
+            <div className="w-full [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+              <div className="flex items-center animate-infinite-scroll hover:[animation-play-state:paused]">
+                {[...skillsList, ...skillsList].map((skill, i) => (
+                  <div key={i} className="flex items-center">
+                    <div className="flex items-center gap-3 mx-8 group cursor-default">
+                      <div className="relative transition-transform duration-300 group-hover:scale-105 rounded-sm overflow-hidden flex-shrink-0 border border-zinc-800/50 group-hover:border-emerald-500/30">
+                        <img 
+                          src={skill.icon} 
+                          alt={skill.name} 
+                          className="w-5 h-5 bg-white/5 p-0.5" 
+                        />
+                        <div className="absolute inset-0 bg-emerald-500/40 group-hover:bg-transparent mix-blend-multiply transition-colors duration-300 pointer-events-none"></div>
+                      </div>
+                      <span className="text-zinc-400 uppercase tracking-widest text-[11px] font-bold group-hover:text-zinc-100 transition-colors duration-300">
+                        {skill.name}
+                      </span>
+                    </div>
+                    {/* Séparateur minimaliste */}
+                    <div className="w-[1px] h-4 bg-zinc-800/80"></div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -235,29 +235,28 @@ export default function Portfolio() {
 
       {/* SECTION A PROPOS */}
       <section id="À propos" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
           <div className="relative group">
-            <div className="relative z-10 group rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-900 shadow-xl">
+            <div className="relative z-10 group rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden border border-zinc-700 bg-zinc-900">
               <img src="/assets/ChatGPT Image 27 févr. 2026, 20_20_04.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
               <div className="absolute inset-0 bg-emerald-500/40 group-hover:bg-transparent mix-blend-multiply"></div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
+            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-none rounded-tl-[4rem] rounded-br-[4rem] -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3"><span className="text-emerald-500">01.</span> À propos de moi</h2>
-            <div className="space-y-4 text-zinc-300 text-lg leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 flex items-center gap-3">À propos de moi</h2>
+            <div className="space-y-6 text-zinc-300 text-xl leading-relaxed">
               <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse fullstack à Cotonou.</p>
               <p>Maîtrisant à la fois le frontend et le backend, je crée des applications web cohérentes, performantes et centrées sur l'utilisateur.</p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              <div className="p-4 border-l-2 border-emerald-500 bg-zinc-900/50 rounded-r-lg">
-                <h3 className="text-zinc-100 font-bold mb-1">Vision</h3>
-                <p className="text-zinc-400 text-sm">Simplifier la vie via le web.</p>
-              </div>
-              <div className="p-4 border-l-2 border-emerald-500 bg-zinc-900/50 rounded-r-lg">
-                <h3 className="text-zinc-100 font-bold mb-1">Objectifs</h3>
-                <p className="text-zinc-400 text-sm">Bâtir des outils numériques à fort impact.</p>
-              </div>
+            <div className="pt-6">
+              <a
+                href="/assets/CV_ASSOGBA_Luz-clarita.pdf"
+                download
+                className="inline-flex px-8 py-3 bg-zinc-800 border border-zinc-700 text-zinc-200 rounded-full font-bold hover:bg-zinc-700 transition-all items-center gap-3 shadow-sm"
+              >
+                Télécharger mon CV
+              </a>
             </div>
           </div>
         </div>
@@ -265,8 +264,8 @@ export default function Portfolio() {
 
       {/* SECTION SERVICES */}
       <section id="skills" className="py-24 px-4 sm:px-6 bg-zinc-800/20  border-zinc-700/50 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16 flex items-center  gap-3"><span className="text-emerald-500 font-mono text-xl">02.</span>Services</h2>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 flex items-center gap-3">Services</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
               {
@@ -287,8 +286,8 @@ export default function Portfolio() {
             ].map((s, i) => (
               <div key={i} className="p-8 bg-zinc-900/50 border border-zinc-700 rounded-2xl hover:border-emerald-500/30 transition-all">
                 <div className="text-emerald-500 mb-6">{s.icon}</div>
-                <h3 className="text-xl font-bold mb-4 uppercase text-xs tracking-widest">{s.title}</h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">{s.text}</p>
+                <h3 className="text-xl font-bold mb-4 uppercase tracking-widest">{s.title}</h3>
+                <p className="text-zinc-400 text-base md:text-lg leading-relaxed">{s.text}</p>
               </div>
             ))}
           </div>
@@ -297,60 +296,61 @@ export default function Portfolio() {
 
       {/* SECTION FUSIONNÉE EXPÉRIENCE & PROJETS */}
       <section id="experience" className="py-24 px-4 sm:px-6 bg-zinc-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16 flex items-center gap-3">
-            <span className="text-emerald-500 font-mono text-xl">03.</span> Expérience & Réalisations
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 flex items-center gap-3">
+            Expérience & Réalisations
           </h2>
 
-          <div className="space-y-12 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-[1px] before:bg-zinc-800">
+          <div className="space-y-32 relative before:absolute before:inset-0 before:left-8 before:h-full before:w-[1px] before:bg-zinc-800">
             {workHistory.map((exp, i) => (
               <div key={i} className="relative pl-16 group">
                 <div className="absolute left-6 top-0 w-4 h-4 rounded-full bg-zinc-900 border-2 border-emerald-500 z-10 group-hover:scale-125 transition-transform" />
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold text-zinc-100">{exp.role}</h3>
-                  <span className="text-emerald-500 font-mono text-sm">{exp.period}</span>
+                  <h3 className="text-2xl font-bold text-zinc-100">{exp.role}</h3>
+                  <span className="text-emerald-500 font-mono text-base md:text-lg">{exp.period}</span>
                 </div>
-                <h4 className="text-zinc-400 font-medium mb-4 flex items-center gap-2 text-emerald-500/80">
-                  <Briefcase size={14} /> {exp.company}
+                <h4 className="text-zinc-400 text-lg font-medium mb-8 flex items-center gap-2 text-emerald-500/80">
+                  - {exp.company}
                 </h4>
-                <p className="text-zinc-400 leading-relaxed max-w-2xl italic mb-6">{exp.desc}</p>
 
                 {exp.projects.length > 0 && (
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="flex flex-col gap-24 mb-8">
                     {exp.projects.map((proj, idx) => (
-                      <div key={idx} className="group/card relative">
-                        <div className="relative p-6 bg-zinc-800/40 border border-zinc-700 rounded-2xl group-hover/card:border-emerald-500/30 transition-all duration-500">
-                          <div className="flex gap-1.5 mb-4 px-1">
-                            <div className="w-2 h-2 rounded-full bg-zinc-600" />
-                            <div className="w-2 h-2 rounded-full bg-zinc-600" />
-                            <div className="w-2 h-2 rounded-full bg-zinc-600" />
+                      <div key={idx} className={`group/project flex flex-col items-stretch gap-6 md:gap-10 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                        
+                        {/* Image Card */}
+                        <div className="relative group/image w-full md:w-[60%] aspect-video border border-zinc-700/50 rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden shadow-sm group-hover/project:border-emerald-500/30 transition-all duration-500">
+                          <img src={proj.image} alt={proj.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover/project:scale-105" />
+                          
+                          {/* Filtre conservé et renforcé */}
+                          <div className="absolute inset-0 bg-emerald-500/40 group-hover/project:bg-transparent mix-blend-multiply transition-colors duration-500 pointer-events-none"></div>
+
+                          {/* Flèche centrée sur l'image (visible au hover de l'image uniquement) */}
+                          <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 flex items-center justify-center bg-zinc-950/60 backdrop-blur-md rounded-full border border-white/20 text-emerald-400 opacity-0 scale-75 group-hover/image:opacity-100 group-hover/image:scale-100 hover:!bg-emerald-500 hover:!text-zinc-950 transition-all duration-500 z-10 shadow-2xl">
+                            <ArrowUpRight size={28} strokeWidth={2.5} />
+                          </a>
+                        </div>
+                        
+                        {/* Details Card */}
+                        <div className="relative w-full md:w-[40%] p-8 md:p-10 bg-zinc-800/20 border border-zinc-700/30 rounded-none rounded-tl-[4rem] rounded-br-[4rem] flex flex-col justify-center shadow-sm group-hover/project:border-emerald-500/20 transition-all duration-500">
+                          
+                          {/* Flèche glassmorphism déplacée ici */}
+                          <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center bg-zinc-900/50 backdrop-blur-md rounded-full border border-white/10 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-950 hover:scale-110 transition-all duration-300 z-10 shadow-sm">
+                            <ArrowUpRight size={22} strokeWidth={2.5} />
+                          </a>
+
+                          <div className="flex gap-1.5 mb-6 px-1">
+                            <div className="w-2 h-2 rounded-full bg-zinc-600 group-hover/project:bg-emerald-500 transition-colors" />
+                            <div className="w-2 h-2 rounded-full bg-zinc-600 group-hover/project:bg-emerald-500 transition-colors delay-75" />
+                            <div className="w-2 h-2 rounded-full bg-zinc-600 group-hover/project:bg-emerald-500 transition-colors delay-150" />
                           </div>
-                          <div className="relative rounded-lg overflow-hidden border border-zinc-700 bg-zinc-900 shadow-2xl transition-transform group-hover/card:-translate-y-2 duration-500 aspect-video">
-                            <div><img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />
-                              <div className="absolute inset-0 bg-emerald-500/40 group-hover/card:bg-transparent mix-blend-multiply"></div>
-                            </div>
-                            <div className="absolute inset-0 bg-zinc-950/80 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
-                              <h5 className="text-emerald-400 font-bold mb-1">{proj.title}</h5>
-                              <p className="text-xs text-zinc-300 mb-4">{proj.desc}</p>
-                              <a href={proj.link} target="_blank" rel="noreferrer" className="p-2 bg-emerald-500 text-zinc-950 rounded-full hover:bg-emerald-400 transition-colors">
-                                <ArrowUpRight size={20} />
-                              </a>
-                            </div>
-                          </div>
+                          <h5 className="text-2xl md:text-3xl font-bold text-zinc-100 mb-4 pr-12">{proj.title}</h5>
+                          <p className="text-zinc-400 text-lg leading-relaxed">{proj.desc}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                 )}
-
-                <div className="grid grid-cols-1 gap-y-3 gap-x-4 pt-4 border-t border-zinc-800/50">
-                  {exp.details.map((detail, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-zinc-400 ">
-                      <div className="w-8 mt-0.5 h-0.5 bg-emerald-500/50 flex-shrink-0" />
-                      {detail}
-                    </div>
-                  ))}
-                </div>
 
               </div>
             ))}
@@ -360,9 +360,9 @@ export default function Portfolio() {
 
       {/* SECTION CONTACT */}
       <section id="contact" className="py-24 px-4 sm:px-6 relative overflow-hidden bg-zinc-800/20  from-zinc-900 via-zinc-800 to-zinc-900 text-center">
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
-          <p className="text-zinc-400 mb-12 text-lg font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-zinc-100">Prêt à collaborer ?</h2>
+          <p className="text-zinc-400 mb-12 text-xl md:text-2xl font-medium">Actuellement en quête de nouveaux projets stimulants.</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a href="mailto:sandrelleassogba6@gmail.com" className="flex items-center justify-center gap-3 px-10 py-3 text-sm bg-zinc-900 border border-zinc-800 text-emerald-400 rounded-full font-medium hover:bg-zinc-800 transition-all tracking-widest">

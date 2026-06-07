@@ -296,7 +296,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative group">
             <div className="relative z-10 group rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden border border-zinc-700 bg-zinc-900">
-              <img src="/assets/ChatGPT Image 27 févr. 2026, 20_20_04.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
+              <img src="/assets/test.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
               <div className="absolute inset-0 bg-emerald-500/40 group-hover:bg-transparent mix-blend-multiply"></div>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-none rounded-tl-[4rem] rounded-br-[4rem] -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />

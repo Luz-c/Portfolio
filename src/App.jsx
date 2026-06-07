@@ -61,9 +61,18 @@ export default function Portfolio() {
       period: "2026 - Présent",
       desc: "Développement et maintenance de solutions web complètes pour l'inclusion technologique.",
       projects: [
-        { title: "SAFEN 2026", image: "/assets/Capture d'écran 2026-02-25 174752.png", desc: "Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique.", link: "https://safen.womenintech.bj/" },
-        { title: "Guid'elles", image: "/assets/guid.png", desc: "Programme de mentorat", link: "https://womenintech.bj/guidelles/" }
-
+        { 
+          title: "SAFEN 2026", 
+          image: "/assets/Capture d'écran 2026-02-25 174752.png", 
+          desc: "Développement du site du SAFEN 2026 ayant pour thème 'Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique'.", 
+          link: "https://safen.womenintech.bj/"
+        },
+        { 
+          title: "Guid'elles", 
+          image: "/assets/guid.png", 
+          desc: "Implémentation de la landing page de Guid'elles, un programme de mentorat.", 
+          link: "https://womenintech.bj/guidelles/"
+        }
       ],
       details: ["Optimisation et intégration du site web", "Responsive design", "Inclusion numérique", "Correction automatique", "Gestion sécurisée", "UX moderne"]
     },
@@ -73,10 +82,24 @@ export default function Portfolio() {
       period: "Fév 2026 - Présent",
       desc: "Conception d'interfaces dynamiques et intégration de maquettes pour une startup innovante.",
       projects: [
-        { title: "Intégration de maquette", image: "/assets/Capture d'écran 2026-02-25 175035.png", desc: "Intégration de maquettes pour le startup Ashita skills.", link: "https://inovtest.ashitaskills.com/" },
-        { title: "Proposition de design", image: "/assets/Capture d'écran 2026-02-24 112812.png", desc: "Page contact pour le startup Ashita skills.", link: "https://inovtest.ashitaskills.com/contact/" },
-        { title: "Développement d'une landing page", image: "/assets/ashit.png", desc: "Landing page pour l'inscription aux ateliers en présentiel", link: "https://ashita.ct.ws/?i=1" }
-
+        { 
+          title: "Maquette d'Évaluation", 
+          image: "/assets/Capture d'écran 2026-02-25 175035.png", 
+          desc: "Intégration rigoureuse d'interfaces d'évaluation dynamique et de test d'aptitudes pour la plateforme d'apprentissage de la startup.", 
+          link: "https://inovtest.ashitaskills.com/"
+        },
+        { 
+          title: "Interface de Contact", 
+          image: "/assets/Capture d'écran 2026-02-24 112812.png", 
+          desc: "Conception ergonomique et intégration d'une page de contact interactive équipée de validations de formulaires.", 
+          link: "https://inovtest.ashitaskills.com/contact/"
+        },
+        { 
+          title: "Landing Page Inscriptions", 
+          image: "/assets/ashit.png", 
+          desc: "Développement et optimisation d'une page d'atterrissage destinée aux inscriptions pour les ateliers de formation en présentiel.", 
+          link: "https://ashita.ct.ws/?i=1"
+        }
       ],
       details: ["Collaboration à distance", "Intégration UI/UX", "Refonte de pages", "Optimisation SEO", "Accessibilité web"]
     },
@@ -86,34 +109,72 @@ export default function Portfolio() {
       period: "Oct 2025 - Jan 2026",
       desc: "Immersion technique sur des projets web de la conception à la mise en base de données.",
       projects: [
-        { title: "Gaming_BSM", image: "/assets/img6.png", desc: "Jeu interactif intelligent.", link: "https://bsm-gaming.vercel.app/" },
+        { 
+          title: "Gaming BSM", 
+          image: "/assets/img6.png", 
+          desc: "Développement d'un jeu interactif de devinette de nombre pour l'entreprise BSM Groupe.", 
+          link: "https://bsm-gaming.vercel.app/"
+        }
       ],
       details: ["Logique JS avancée", "Manipulation du DOM", "Design Responsive", "Gestion de projet Agile", "Collaboration Lead Tech"]
     },
-
     {
       company: "Whispa",
       role: "Développeuse Fullstack en Formation",
       period: "Avril 2025 - Présent",
       desc: "Formation continue en développement web fullstack.",
       projects: [
-        { title: "TOTCHE", image: "/assets/img2.png", desc: "Plateforme de mise en relation entre touriste et guides locaux.", link: "https://luz-c.github.io/Site_Touristique/" },
-        { title: "Intégration de maquette", image: "/assets/Capture d'écran 2026-02-25 182732.png", desc: "Intégration de maquette au pixel près lors de ma formation.", link: "#" },
-        { title: "Mama Bio", image: "/assets/Capture d'écran 2026-02-25 183557.png", desc: "Site vitrine pour une entreprise de bio.", link: "#" },
-        { title: "Intégration de maquette", image: "/assets/Capture d'écran 2026-02-25 184112.png", desc: "Intégration d'un dashboard.", link: "#" }
+        { 
+          title: "TOTCHE", 
+          image: "/assets/img2.png", 
+          desc: "Plateforme touristique facilitant la mise en relation entre voyageurs et guides locaux pour la découverte de patrimoines.", 
+          link: "https://luz-c.github.io/Site_Touristique/"
+        },
+        { 
+          title: "Intégration Figma Pixel-Perfect", 
+          image: "/assets/Capture d'écran 2026-02-25 182732.png", 
+          desc: "Intégration pixel-perfect d'interfaces graphiques complexes d'après des designs Figma de référence.", 
+          link: "#"
+        },
+        { 
+          title: "Mama Bio", 
+          image: "/assets/Capture d'écran 2026-02-25 183557.png", 
+          desc: "Création d'un site vitrine éco-conçu présentant des gammes de produits biologiques et valorisant la production locale.", 
+          link: "#"
+        },
+        { 
+          title: "Dashboard Administrateur", 
+          image: "/assets/Capture d'écran 2026-02-25 184112.png", 
+          desc: "Intégration d'un tableau de bord d'administration avec composants interactifs de suivi et de visualisation.", 
+          link: "#"
+        }
       ],
       details: ["Travail en équipe", "Intégration UI/UX", "Logique de données", "Refonte de pages", "Optimisation SEO", "Accessibilité web"]
     },
-
     {
       company: "Ecole229 - Dclic",
       role: "Formation developpement Web",
       period: "Jan 2025 - Mai 2025",
       desc: "Formation intensive en développement web fullstack.",
       projects: [
-        { title: "Iguide", image: "/assets/img5.png", desc: "Iguide,guide d'orientation des nouveau bachelier.", link: "https://luz-c.github.io/GUIDE/" },
-        { title: "Exam Easy", image: "/assets/img1.png", desc: "Plateforme d'examen en ligne.", link: "#" },
-        { title: "Bibliotheque", image: "/assets/img3.png", desc: "Plateforme de gestion de bibliothèque.", link: "#" }
+        { 
+          title: "Iguide", 
+          image: "/assets/img5.png", 
+          desc: "Portail d'orientation académique interactif conçu pour guider les nouveaux bacheliers dans la sélection de leurs filières universitaires.", 
+          link: "https://luz-c.github.io/GUIDE/"
+        },
+        { 
+          title: "Exam Easy", 
+          image: "/assets/img1.png", 
+          desc: "Plateforme d'examen en ligne permettant la création de questionnaires et la correction automatisée des épreuves.", 
+          link: "#"
+        },
+        { 
+          title: "Gestion de Bibliothèque", 
+          image: "/assets/img3.png", 
+          desc: "Application interne de gestion documentaire assurant le suivi des stocks de livres, des emprunts et des retours.", 
+          link: "#"
+        }
       ],
       details: ["Logique JS avancée", "Manipulation du DOM", "Design Responsive"]
     }
@@ -243,7 +304,7 @@ export default function Portfolio() {
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">À propos de moi</h2>
             <div className="space-y-6 text-zinc-300 text-base md:text-xl leading-relaxed">
-              <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse fullstack à Cotonou.</p>
+              <p>Je suis <span className="text-emerald-400 font-medium">Luz-clarita ASSOGBA</span>, développeuse web fullstack </p>
               <p>Maîtrisant à la fois le frontend et le backend, je crée des applications web cohérentes, performantes et centrées sur l'utilisateur.</p>
             </div>
             <div className="pt-6">

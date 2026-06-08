@@ -61,17 +61,17 @@ export default function Portfolio() {
       period: "2026 - Présent",
       desc: "Développement et maintenance de solutions web complètes pour l'inclusion technologique.",
       projects: [
-        { 
-          title: "SAFEN 2026", 
-          image: "/assets/Capture d'écran 2026-02-25 174752.png", 
-          desc: "Développement du site du SAFEN 2026 ayant pour thème 'Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique'.", 
-          link: "https://safen.womenintech.bj/"
+        {
+          title: "SAFEN 2026",
+          image: "/assets/Capture d'écran 2026-02-25 174752.png",
+          desc: "Développement du site du SAFEN 2026 ayant pour thème 'Puissance féminine à l’ère de l’IA: Compétences, Innovation et Inclusion pour Transformer l’Afrique'.",
+          link: "https://safen.womenintech.bj/",
         },
-        { 
-          title: "Guid'elles", 
-          image: "/assets/guid.png", 
-          desc: "Implémentation de la landing page de Guid'elles, un programme de mentorat.", 
-          link: "https://womenintech.bj/guidelles/"
+        {
+          title: "Guid'elles",
+          image: "/assets/guid.png",
+          desc: "Implémentation de la landing page de Guid'elles, un programme de mentorat.",
+          link: "https://womenintech.bj/guidelles/",
         }
       ],
       details: ["Optimisation et intégration du site web", "Responsive design", "Inclusion numérique", "Correction automatique", "Gestion sécurisée", "UX moderne"]
@@ -82,38 +82,37 @@ export default function Portfolio() {
       period: "Fév 2026 - Présent",
       desc: "Conception d'interfaces dynamiques et intégration de maquettes pour une startup innovante.",
       projects: [
-        { 
-          title: "Maquette d'Évaluation", 
-          image: "/assets/Capture d'écran 2026-02-25 175035.png", 
-          desc: "Intégration rigoureuse d'interfaces d'évaluation dynamique et de test d'aptitudes pour la plateforme d'apprentissage de la startup.", 
-          link: "https://inovtest.ashitaskills.com/"
+        {
+          title: "Maquette d'Évaluation",
+          image: "/assets/Capture d'écran 2026-02-25 175035.png",
+          desc: "Intégration rigoureuse d'interfaces d'évaluation dynamique et de test d'aptitudes pour la plateforme d'apprentissage de la startup.",
+          link: "https://inovtest.ashitaskills.com/",        },
+        {
+          title: "Interface de Contact",
+          image: "/assets/Capture d'écran 2026-02-24 112812.png",
+          desc: "Conception ergonomique et intégration d'une page de contact interactive équipée de validations de formulaires.",
+          link: "https://inovtest.ashitaskills.com/contact/",
         },
-        { 
-          title: "Interface de Contact", 
-          image: "/assets/Capture d'écran 2026-02-24 112812.png", 
-          desc: "Conception ergonomique et intégration d'une page de contact interactive équipée de validations de formulaires.", 
-          link: "https://inovtest.ashitaskills.com/contact/"
-        },
-        { 
-          title: "Landing Page Inscriptions", 
-          image: "/assets/ashit.png", 
-          desc: "Développement et optimisation d'une page d'atterrissage destinée aux inscriptions pour les ateliers de formation en présentiel.", 
-          link: "https://ashita.ct.ws/?i=1"
+        {
+          title: "Landing Page Inscriptions",
+          image: "/assets/ashit.png",
+          desc: "Développement et optimisation d'une page d'atterrissage destinée aux inscriptions pour les ateliers de formation en présentiel.",
+          link: "https://ashita.ct.ws/?i=1",
         }
       ],
       details: ["Collaboration à distance", "Intégration UI/UX", "Refonte de pages", "Optimisation SEO", "Accessibilité web"]
     },
     {
-      company: "BSM Group",
+      company: "BSM groupe",
       role: "Stagiaire Développeuse Web",
       period: "Oct 2025 - Jan 2026",
       desc: "Immersion technique sur des projets web de la conception à la mise en base de données.",
       projects: [
-        { 
-          title: "Gaming BSM", 
-          image: "/assets/img6.png", 
-          desc: "Développement d'un jeu interactif de devinette de nombre pour l'entreprise BSM Groupe.", 
-          link: "https://bsm-gaming.vercel.app/"
+        {
+          title: "Gaming BSM",
+          image: "/assets/img6.png",
+          desc: "Conception et développement d'un jeu interactif de devinette de nombre.",
+          link: "https://bsm-gaming.vercel.app/",
         }
       ],
       details: ["Logique JS avancée", "Manipulation du DOM", "Design Responsive", "Gestion de projet Agile", "Collaboration Lead Tech"]
@@ -121,32 +120,32 @@ export default function Portfolio() {
     {
       company: "Whispa",
       role: "Développeuse Fullstack en Formation",
-      period: "Avril 2025 - Présent",
+      period: "Avril 2025 - Mai 2026",
       desc: "Formation continue en développement web fullstack.",
       projects: [
-        { 
-          title: "TOTCHE", 
-          image: "/assets/img2.png", 
-          desc: "Plateforme touristique facilitant la mise en relation entre voyageurs et guides locaux pour la découverte de patrimoines.", 
-          link: "https://luz-c.github.io/Site_Touristique/"
+        {
+          title: "TOTCHE",
+          image: "/assets/img2.png",
+          desc: "Plateforme touristique facilitant la mise en relation entre voyageurs et guides locaux pour la découverte de patrimoines.",
+          link: "https://luz-c.github.io/Site_Touristique/",
         },
-        { 
-          title: "Intégration Figma Pixel-Perfect", 
-          image: "/assets/Capture d'écran 2026-02-25 182732.png", 
-          desc: "Intégration pixel-perfect d'interfaces graphiques complexes d'après des designs Figma de référence.", 
-          link: "#"
+        {
+          title: "Intégration Figma Pixel-Perfect",
+          image: "/assets/Capture d'écran 2026-02-25 182732.png",
+          desc: "Intégration pixel-perfect d'interfaces graphiques complexes d'après des designs Figma de référence.",
+          link: "#",
         },
-        { 
-          title: "Mama Bio", 
-          image: "/assets/Capture d'écran 2026-02-25 183557.png", 
-          desc: "Création d'un site vitrine éco-conçu présentant des gammes de produits biologiques et valorisant la production locale.", 
-          link: "#"
+        {
+          title: "Mama Bio",
+          image: "/assets/Capture d'écran 2026-02-25 183557.png",
+          desc: "Création d'un site vitrine éco-conçu présentant des gammes de produits biologiques et valorisant la production locale.",
+          link: "#",
         },
-        { 
-          title: "Dashboard Administrateur", 
-          image: "/assets/Capture d'écran 2026-02-25 184112.png", 
-          desc: "Intégration d'un tableau de bord d'administration avec composants interactifs de suivi et de visualisation.", 
-          link: "#"
+        {
+          title: "Dashboard Administrateur",
+          image: "/assets/Capture d'écran 2026-02-25 184112.png",
+          desc: "Intégration d'un tableau de bord d'administration avec composants interactifs de suivi et de visualisation.",
+          link: "#",
         }
       ],
       details: ["Travail en équipe", "Intégration UI/UX", "Logique de données", "Refonte de pages", "Optimisation SEO", "Accessibilité web"]
@@ -157,23 +156,23 @@ export default function Portfolio() {
       period: "Jan 2025 - Mai 2025",
       desc: "Formation intensive en développement web fullstack.",
       projects: [
-        { 
-          title: "Iguide", 
-          image: "/assets/img5.png", 
-          desc: "Portail d'orientation académique interactif conçu pour guider les nouveaux bacheliers dans la sélection de leurs filières universitaires.", 
-          link: "https://luz-c.github.io/GUIDE/"
+        {
+          title: "Iguide",
+          image: "/assets/img5.png",
+          desc: "Portail d'orientation académique interactif conçu pour guider les nouveaux bacheliers dans la sélection de leurs filières universitaires.",
+          link: "https://luz-c.github.io/GUIDE/",
         },
-        { 
-          title: "Exam Easy", 
-          image: "/assets/img1.png", 
-          desc: "Plateforme d'examen en ligne permettant la création de questionnaires et la correction automatisée des épreuves.", 
-          link: "#"
+        {
+          title: "Exam Easy",
+          image: "/assets/img1.png",
+          desc: "Plateforme d'examen en ligne permettant la création de questionnaires et la correction automatisée des épreuves.",
+          link: "#",
         },
-        { 
-          title: "Gestion de Bibliothèque", 
-          image: "/assets/img3.png", 
-          desc: "Application interne de gestion documentaire assurant le suivi des stocks de livres, des emprunts et des retours.", 
-          link: "#"
+        {
+          title: "Gestion de Bibliothèque",
+          image: "/assets/img3.png",
+          desc: "Application interne de gestion documentaire assurant le suivi des stocks de livres, des emprunts et des retours.",
+          link: "#",
         }
       ],
       details: ["Logique JS avancée", "Manipulation du DOM", "Design Responsive"]
@@ -263,10 +262,10 @@ export default function Portfolio() {
                   <div key={i} className="flex items-center">
                     <div className="flex items-center gap-3 mx-8 group cursor-default">
                       <div className="relative transition-transform duration-300 group-hover:scale-105 rounded-sm overflow-hidden flex-shrink-0 border border-zinc-800/50 group-hover:border-emerald-500/30">
-                        <img 
-                          src={skill.icon} 
-                          alt={skill.name} 
-                          className="w-5 h-5 bg-white/5 p-0.5" 
+                        <img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="w-5 h-5 bg-white/5 p-0.5"
                         />
                         <div className="absolute inset-0 bg-emerald-500/40 group-hover:bg-transparent mix-blend-multiply transition-colors duration-300 pointer-events-none"></div>
                       </div>
@@ -296,7 +295,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative group">
             <div className="relative z-10 group rounded-none rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden border border-zinc-700 bg-zinc-900">
-              <img src="/assets/test.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
+              <img src="/assets/ChatGPT Image 27 févr. 2026, 20_20_04.png" alt="Luz" className="w-full h-full object-cover -scale-x-100 transition duration-500 aspect-square" />
               <div className="absolute inset-0 bg-emerald-500/40 group-hover:bg-transparent mix-blend-multiply"></div>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-emerald-500/20 rounded-none rounded-tl-[4rem] rounded-br-[4rem] -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-500" />
@@ -375,11 +374,11 @@ export default function Portfolio() {
                   <div className="flex flex-col gap-16 mb-8">
                     {exp.projects.map((proj, idx) => (
                       <div key={idx} className={`group/project flex flex-col items-stretch gap-6 md:gap-10 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-                        
+
                         {/* Image Card */}
                         <div className="relative group/image w-full md:w-[60%] aspect-video border border-zinc-700/50 rounded-none rounded-tl-[2rem] rounded-br-[2rem] md:rounded-tl-[4rem] md:rounded-br-[4rem] overflow-hidden shadow-sm group-hover/project:border-emerald-500/30 transition-all duration-500">
                           <img src={proj.image} alt={proj.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover/project:scale-105" />
-                          
+
                           {/* Filtre conservé et renforcé */}
                           <div className="absolute inset-0 bg-emerald-500/40 group-hover/project:bg-transparent mix-blend-multiply transition-colors duration-500 pointer-events-none"></div>
 
@@ -388,10 +387,10 @@ export default function Portfolio() {
                             <ArrowUpRight size={24} className="md:w-7 md:h-7" strokeWidth={2.5} />
                           </a>
                         </div>
-                        
+
                         {/* Details Card */}
                         <div className="relative w-full md:w-[40%] p-6 md:p-10 bg-zinc-800/20 border border-zinc-700/30 rounded-none rounded-tl-[2rem] rounded-br-[2rem] md:rounded-tl-[4rem] md:rounded-br-[4rem] flex flex-col justify-center shadow-sm group-hover/project:border-emerald-500/20 transition-all duration-500">
-                          
+
                           {/* Flèche glassmorphism déplacée ici */}
                           <a href={proj.link} target="_blank" rel="noreferrer" className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center bg-zinc-900/50 backdrop-blur-md rounded-full border border-white/10 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-950 hover:scale-110 transition-all duration-300 z-10 shadow-sm">
                             <ArrowUpRight size={22} strokeWidth={2.5} />
@@ -404,6 +403,18 @@ export default function Portfolio() {
                           </div>
                           <h5 className="text-2xl md:text-3xl font-bold text-zinc-100 mb-4 pr-12">{proj.title}</h5>
                           <p className="text-zinc-400 text-lg leading-relaxed">{proj.desc}</p>
+                          {proj.tech && proj.tech.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-6">
+                              {proj.tech.map((t, idx_t) => (
+                                <span
+                                  key={idx_t}
+                                  className="px-2.5 py-1 text-[10px] md:text-xs font-mono tracking-wider text-zinc-300 bg-zinc-900/50 border border-zinc-700/40 rounded-none uppercase"
+                                >
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </div>
                     ))}

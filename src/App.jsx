@@ -56,6 +56,42 @@ export default function Portfolio() {
 
   const workHistory = [
     {
+      company: "ONG Jeunes Filles Mères Engagées (JFME)",
+      role: "Consultante Numérique & Développeuse Web",
+      period: "Juin 2026 - Présent",
+      desc: "Mission d'accompagnement numérique : sécurisation de l'infrastructure, audit des usages et développement d'outils digitaux ciblés sur la santé sexuelle et reproductive (DSSR).",
+      projects: [
+        {
+          title: "Site Institutionnel JFME",
+          image: "/assets/jfme.png",
+          desc: "Création du site web institutionnel pour asseoir l'identité en ligne de l'ONG et valoriser ses actions sur le terrain.",
+          link: "https://jfmebenin.org/",
+        },
+        {
+          title: "Chatbot DSSR (Èko)",
+          image: "/assets/eko (2).png",
+          desc: "Développement d'un outil interactif offrant aux adolescentes un espace confidentiel pour leurs questions, avec réorientation vers des ressources fiables ou l'assistance locale.",
+          link: "https://www.eko.jfmebenin.org/",
+        }
+      ],
+      details: ["Sécurité Numérique", "Chatbot Interactif", "Santé Sexuelle (DSSR)", "Accessibilité", "Formation d'équipe"]
+    },
+    {
+      company: "RIACO 2026",
+      role: "Développeuse Web",
+      period: "Juin 2026",
+      desc: "Développement intégral du site web événementiel et institutionnel des Rencontres Internationales sur l’Autisme à Cotonou.",
+      projects: [
+        {
+          title: "Site Web RIACO 2026",
+          image: "/assets/riaco.png",
+          desc: "Conception de l'architecture globale, intégration d'une interface responsive moderne et création de composants interactifs avancés (carrousels, gestion des débordements, optimisation UI/UX).",
+          link: "https://autismebenin-riaco.org/",
+        }
+      ],
+      details: ["Site Événementiel", "Architecture Globale", "Interface Responsive", "Optimisation UI/UX", "Composants Avancés"]
+    },
+    {
       company: "Women In Tech",
       role: "Développeuse Fullstack (Temps plein)",
       period: "2026 - Présent",
